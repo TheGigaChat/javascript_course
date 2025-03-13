@@ -1,5 +1,5 @@
 
-# JavaScript Codeimas Full Course
+## Video Link
 
 [Learn How to Connect Visual Studio Code to any Browser](https://www.youtube.com/watch?v=n6TuTE9kEdM&list=PLgttSkTGRkXxYEFxwSBs3BNvY7Su-8nAc&index=2)
 
