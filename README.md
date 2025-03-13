@@ -1,11 +1,14 @@
 
-## In this lesson we don't have any files
+# JavaScript Codeimas Full Course
 
- - The programming happens in the Chrome Browser
+Welcome to the full course of JavaScript. Below you will find all codes that is used in JavaScript course on the [Codeimas](https://www.youtube.com/@Codeimas) channel.
 
+## Topics
 
-
-
+ - 01 lesson: Browser Console, Math Basics, Variables
+ - 02 lesson: Connect Visual Studio Code to any Browser
+ - 03 lesson: Numbers, Strings, Undefined, Boolean
+ - 04 lesson: Practice with Storytelling Game
 
 ## Authors
 
@@ -13,5 +16,4 @@ Codeimas
 - [@JavaScript Guide](https://www.youtube.com/watch?v=bdr3fMwEDks)
 
 Code Creator
-- [@TheGigaChat](https://github.com/TheGigaChat)
-
+- [@Codeimas](https://github.com/TheGigaChat)
