@@ -8,7 +8,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 01 lesson: Browser Console, Math Basics, Variables
  - 02 lesson: Connect Visual Studio Code to any Browser
  - 03 lesson: Numbers, Strings, Undefined, Boolean
- - 04 lesson: Practice with Storytelling Game
+ - 04 lesson: If statements
+ - 05 lesson: Practice with Storytelling Game
 
 ## Authors
 
