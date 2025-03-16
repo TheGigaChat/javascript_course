@@ -1,7 +1,7 @@
 
 ## Video link
 
-[JavaScript If Statements for Beginners](https://www.youtube.com/watch?v=1rzFdUFVAxU)
+[JavaScript If Statements for Beginners](https://youtu.be/M86R18iq44o)
 
 
 ## Steps from the Video
