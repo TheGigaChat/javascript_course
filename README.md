@@ -10,6 +10,9 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 03 lesson: Numbers, Strings, Undefined, Boolean
  - 04 lesson: If statements
  - 05 lesson: Practice with Storytelling Game
+ - 06 lesson: Comparison Operators
+ - 07 lesson: Practice with Akinator style Game
+ - 08 lesson: Logical Operators
 
 ## Authors
 
