@@ -1,168 +1,127 @@
-// roullete
+// Bucket roulette — Code repetition to emphasize future importance of loops and functions
 
-// ammos and you should choose where you want to shot
+let playerLives = 2
+let dealerLives = 2
+let ammo
+let playerChoice
 
-let firstAmmo = Math.floor(Math.random() * 2)
-// let secondAmmo = Math.floor(Math.random() * 2)
-// let thirdAmmo = Math.floor(Math.random() * 2)
+// First cycle
+if (playerLives > 0 && dealerLives > 0) {
+    ammo = Math.floor(Math.random() * 2)
+    playerChoice = confirm("🔫 Where do you want to shoot?\nOK - Shoot the dealer! 😎\nCancel - Shoot yourself! 😬")
 
-let playerLifes = 2
-let dillerLifes = 2
-
-// let playerWasShotten
-
-// first cycle
-let playerChoice = confirm("Where do you want to shoot?\nOK - Diller\nCancel - Myself") // true - opponent, false - yourself
-
-// console.log(firstAmmo)
-
-
-// playerLifes || dillerLifes == 0
-if (playerLifes == 0 || dillerLifes == 0) {
-    // someone is dead
-    if (playerLifes == 0) {
-        confirm("Diller is a Winner!")
+    if (ammo === 1 && playerChoice) {
+        console.log("😃 You hit the dealer! Dealer loses a life. Remaining lives: " + (dealerLives - 1))
+        dealerLives = dealerLives - 1
+    } else if (ammo === 1 && !playerChoice) {
+        console.log("😢 Oops! You shot yourself! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
+    } else if (ammo === 0 && playerChoice) {
+        console.log("😢 Empty shot! Dealer counterattacks! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
     } else {
-        confirm("Player is a Winner")
+        console.log("💖 Lucky break! You gain an extra life. Total lives: " + (playerLives + 1))
+        playerLives = playerLives + 1
     }
-} // else is not needed
 
-// visualise all the combinations that we have
-if (firstAmmo == 1 && playerChoice) {
-    console.log("Dillar has -1 life. 1 live is remaining, be careful")
-    dillerLifes--
-} else if (firstAmmo == 1 && !playerChoice) {
-    console.log("Player has -1 life. 1 live is remaining, be careful")
-    playerLifes--
-} else if (firstAmmo == 0 && playerChoice) {
-    console.log("Dillar has +1 life. 1 live is remaining, be careful")
-    dillerLifes++
-} else {
-    console.log("Player has +1 life. 1 live is remaining, be careful")
-    playerLifes++
-}
+} // End of First cycle
 
-// second cycle
+// Second cycle
+if (playerLives > 0 && dealerLives > 0) {
+    ammo = Math.floor(Math.random() * 2)
+    playerChoice = confirm("🔫 Where do you want to shoot?\nOK - Shoot the dealer! 😎\nCancel - Shoot yourself! 😬")
 
-// upload the random again
-firstAmmo = Math.floor(Math.random() * 2)
-
-if (playerLifes == 0 || dillerLifes == 0) {
-    // someone is dead
-    if (playerLifes == 0) {
-        confirm("Diller is a Winner!")
+    if (ammo === 1 && playerChoice) {
+        console.log("😃 You hit the dealer! Dealer loses a life. Remaining lives: " + (dealerLives - 1))
+        dealerLives = dealerLives - 1
+    } else if (ammo === 1 && !playerChoice) {
+        console.log("😢 Oops! You shot yourself! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
+    } else if (ammo === 0 && playerChoice) {
+        console.log("😢 Empty shot! Dealer counterattacks! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
     } else {
-        confirm("Player is a Winner")
+        console.log("💖 Lucky break! You gain an extra life. Total lives: " + (playerLives + 1))
+        playerLives = playerLives + 1
     }
-}
 
-playerChoice = confirm("Where do you want to shoot?\nOK - Diller\nCancel - Myself")
+} // End of Second cycle
 
-if (firstAmmo == 1 && playerChoice) {
-    console.log("Dillar has -1 life. 1 live is remaining, be careful")
-    dillerLifes--
-} else if (firstAmmo == 1 && !playerChoice) {
-    console.log("Player has -1 life. 1 live is remaining, be careful")
-    playerLifes--
-} else if (firstAmmo == 0 && playerChoice) {
-    console.log("Dillar has +1 life. 1 live is remaining, be careful")
-    dillerLifes++
-} else {
-    console.log("Player has +1 life. 1 live is remaining, be careful")
-    playerLifes++
-}
+// Third cycle
+if (playerLives > 0 && dealerLives > 0) {
+    ammo = Math.floor(Math.random() * 2)
+    playerChoice = confirm("🔫 Where do you want to shoot?\nOK - Shoot the dealer! 😎\nCancel - Shoot yourself! 😬")
 
-
-// third cycle
-
-// upload the random again
-firstAmmo = Math.floor(Math.random() * 2)
-
-if (playerLifes == 0 || dillerLifes == 0) {
-    // someone is dead
-    if (playerLifes == 0) {
-        confirm("Diller is a Winner!")
+    if (ammo === 1 && playerChoice) {
+        console.log("😃 You hit the dealer! Dealer loses a life. Remaining lives: " + (dealerLives - 1))
+        dealerLives = dealerLives - 1
+    } else if (ammo === 1 && !playerChoice) {
+        console.log("😢 Oops! You shot yourself! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
+    } else if (ammo === 0 && playerChoice) {
+        console.log("😢 Empty shot! Dealer counterattacks! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
     } else {
-        confirm("Player is a Winner")
+        console.log("💖 Lucky break! You gain an extra life. Total lives: " + (playerLives + 1))
+        playerLives = playerLives + 1
     }
-}
 
-playerChoice = confirm("Where do you want to shoot?\nOK - Diller\nCancel - Myself")
+} // End of Third cycle
 
-if (firstAmmo == 1 && playerChoice) {
-    console.log("Dillar has -1 life. 1 live is remaining, be careful")
-    dillerLifes--
-} else if (firstAmmo == 1 && !playerChoice) {
-    console.log("Player has -1 life. 1 live is remaining, be careful")
-    playerLifes--
-} else if (firstAmmo == 0 && playerChoice) {
-    console.log("Dillar has +1 life. 1 live is remaining, be careful")
-    dillerLifes++
-} else {
-    console.log("Player has +1 life. 1 live is remaining, be careful")
-    playerLifes++
-}
+// Fourth cycle
+if (playerLives > 0 && dealerLives > 0) {
+    ammo = Math.floor(Math.random() * 2)
+    playerChoice = confirm("🔫 Where do you want to shoot?\nOK - Shoot the dealer! 😎\nCancel - Shoot yourself! 😬")
 
-
-// fourth cycle
-
-// upload the random again
-firstAmmo = Math.floor(Math.random() * 2)
-
-if (playerLifes == 0 || dillerLifes == 0) {
-    // someone is dead
-    if (playerLifes == 0) {
-        confirm("Diller is a Winner!")
+    if (ammo === 1 && playerChoice) {
+        console.log("😃 You hit the dealer! Dealer loses a life. Remaining lives: " + (dealerLives - 1))
+        dealerLives = dealerLives - 1
+    } else if (ammo === 1 && !playerChoice) {
+        console.log("😢 Oops! You shot yourself! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
+    } else if (ammo === 0 && playerChoice) {
+        console.log("😢 Empty shot! Dealer counterattacks! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
     } else {
-        confirm("Player is a Winner")
+        console.log("💖 Lucky break! You gain an extra life. Total lives: " + (playerLives + 1))
+        playerLives = playerLives + 1
     }
-}
 
-playerChoice = confirm("Where do you want to shoot?\nOK - Diller\nCancel - Myself")
+} // End of Fourth cycle
 
-if (firstAmmo == 1 && playerChoice) {
-    console.log("Dillar has -1 life. 1 live is remaining, be careful")
-    dillerLifes--
-} else if (firstAmmo == 1 && !playerChoice) {
-    console.log("Player has -1 life. 1 live is remaining, be careful")
-    playerLifes--
-} else if (firstAmmo == 0 && playerChoice) {
-    console.log("Dillar has +1 life. 1 live is remaining, be careful")
-    dillerLifes++
-} else {
-    console.log("Player has +1 life. 1 live is remaining, be careful")
-    playerLifes++
-}
+// Fifth cycle
+if (playerLives > 0 && dealerLives > 0) {
+    ammo = Math.floor(Math.random() * 2)
+    playerChoice = confirm("🔫 Where do you want to shoot?\nOK - Shoot the dealer! 😎\nCancel - Shoot yourself! 😬")
 
-
-// fifth cycle
-
-// upload the random again
-firstAmmo = Math.floor(Math.random() * 2)
-
-if (playerLifes == 0 || dillerLifes == 0) {
-    // someone is dead
-    if (playerLifes == 0) {
-        confirm("Diller is a Winner!")
+    if (ammo === 1 && playerChoice) {
+        console.log("😃 You hit the dealer! Dealer loses a life. Remaining lives: " + (dealerLives - 1))
+        dealerLives = dealerLives - 1
+    } else if (ammo === 1 && !playerChoice) {
+        console.log("😢 Oops! You shot yourself! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
+    } else if (ammo === 0 && playerChoice) {
+        console.log("😢 Empty shot! Dealer counterattacks! You lose a life. Remaining lives: " + (playerLives - 1))
+        playerLives = playerLives - 1
     } else {
-        confirm("Player is a Winner")
+        console.log("💖 Lucky break! You gain an extra life. Total lives: " + (playerLives + 1))
+        playerLives = playerLives + 1
+    }
+} // End of Fifth cycle
+
+// Final game outcome message
+if (playerLives == 0 || dealerLives == 0) {
+    if (playerLives == 0) {
+        confirm("😢 Game Over! You died! Dealer wins! 💀")
+    } else {
+        confirm("😊 Congratulations! You killed the dealer! 🎉")
+    }
+} else {
+    let continueGame = confirm("🕹️ All cycles are completed!\nDo you want to start a new session? (OK = Yes, Cancel = No)")
+    if (continueGame) {
+        // In this simple structure, instruct the user to refresh the page.
+        confirm("Please refresh the page to start a new session.")
+    } else {
+        confirm("👋 Thanks for playing! See you next time!")
     }
 }
-
-playerChoice = confirm("Where do you want to shoot?\nOK - Diller\nCancel - Myself")
-
-if (firstAmmo == 1 && playerChoice) {
-    console.log("Dillar has -1 life. 1 live is remaining, be careful")
-    dillerLifes--
-} else if (firstAmmo == 1 && !playerChoice) {
-    console.log("Player has -1 life. 1 live is remaining, be careful")
-    playerLifes--
-} else if (firstAmmo == 0 && playerChoice) {
-    console.log("Dillar has +1 life. 1 live is remaining, be careful")
-    dillerLifes++
-} else {
-    console.log("Player has +1 life. 1 live is remaining, be careful")
-    playerLifes++
-}
-
-alert("You have chosen all your bullets and now you are dead!")
