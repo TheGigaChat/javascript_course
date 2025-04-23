@@ -13,6 +13,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 06 lesson: Comparison Operators
  - 07 lesson: Practice with Akinator style Game
  - 08 lesson: Logical Operators
+ - 09 lesson: Buckshot Roulette Game Project
+ - 10 lesson: Buckshot Roulette Game Project
 
 ## Authors
 
