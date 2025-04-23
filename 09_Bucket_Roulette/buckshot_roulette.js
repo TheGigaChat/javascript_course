@@ -1,5 +1,6 @@
 /* Buckshot roulette */
 
+
 let playerLives = 2
 let dealerLives = 2
 let bullet = 1
