@@ -15,6 +15,7 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 08 lesson: Logical Operators
  - 09 lesson: Buckshot Roulette Game Project
  - 10 lesson: Buckshot Roulette Game Project
+ - 11 lesson: While Loops
 
 ## Authors
 
