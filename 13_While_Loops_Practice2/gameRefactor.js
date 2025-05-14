@@ -3,10 +3,9 @@
 let playerLives = 2
 let dealerLives = 2
 let bullet
-let playerChoice
+let playerChoice // true - shoot the dealer, false - shoot yourself
 
 // game loop
-// first cycle
 while (playerLives > 0 && dealerLives > 0) {
 
     bullet = Math.floor(Math.random() * 2)

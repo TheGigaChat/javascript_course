@@ -10,12 +10,11 @@
 
 let message = ""
 let currentLetter = "A"
-while (message.length < 2) {
-    let userChoice = confirm("Please write a message.\nOK - Add the current letter.\nCANCEL - Switch the letter.\nCurrent letter is - " + currentLetter)
+while (message.length < 5) {
+    let userChoice = confirm("Please write a message.\nOK - Add the current letter.\nCancel - switch the letter.\nCurrent letter is: " + currentLetter)
 
     if (userChoice == true) {
         message = message + currentLetter
-        console.log(message)
     } else {
         if (currentLetter == "A") {
             currentLetter = "B"
@@ -23,4 +22,7 @@ while (message.length < 2) {
             currentLetter = "A"
         }
     }
+
+    console.log(message)
 }
+
