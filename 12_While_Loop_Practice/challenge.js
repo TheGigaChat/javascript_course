@@ -39,6 +39,7 @@ while (works) {
 // }
 
 
+
 /* Challenge 2 */
 // Love Letter
 // you have a letter = ""
@@ -63,6 +64,7 @@ while (counter > -5) {
 }
 
 console.log(letter)
+
 
 
 /* Challenge 3 */
