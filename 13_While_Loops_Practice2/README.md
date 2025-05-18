@@ -1,7 +1,7 @@
 
 ## Video link
 
-[JavaScript While Loop Challenges and Game Refactor](https://youtu.be/PKgf1DFo9SQ)
+[JavaScript While Loop Challenges and Game Refactor](https://youtu.be/R-peiOM2fwY)
 
 
 ## Steps from the Video
