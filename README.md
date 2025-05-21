@@ -16,6 +16,9 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 09 lesson: Buckshot Roulette Game Project
  - 10 lesson: Buckshot Roulette Game Project
  - 11 lesson: While Loops
+ - 12 lesson: Practice: While Loops
+ - 13 lesson: Practice and Game Refactoring: While Loops
+ - 14 lesson: Increment Techniques
 
 ## Authors
 
