@@ -3,11 +3,11 @@
 // Answer should be 5050
 
 // anouther short way
-let result = 0
+let total = 0
 for (let i = 1; i < 101; i++) {
-    result += i
+    total += i
 }
-console.log(result)
+console.log(total)
 
 
 /* Challenge 2 */
@@ -26,7 +26,7 @@ for (let i = 0; i < 5; i++) {
     letter += "darling "
 }
 
-for (let i = 5; i > -5; i--) {
+for (let j = 5; j > -5; j--) {
     letter += "love "
 }
 console.log(letter)
