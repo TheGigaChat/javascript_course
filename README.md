@@ -21,6 +21,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 14 lesson: Increment Techniques
  - 15 lesson: Let vs Const vs Var
  - 16 lesson: For Loops
+ - 17 lesson: Practice: For Loops
+ - 18 lesson: Debug tools
 
 ## Authors
 
