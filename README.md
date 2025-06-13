@@ -20,6 +20,7 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 13 lesson: Practice and Game Refactoring: While Loops
  - 14 lesson: Increment Techniques
  - 15 lesson: Let vs Const vs Var
+ - 16 lesson: For Loops
 
 ## Authors
 
