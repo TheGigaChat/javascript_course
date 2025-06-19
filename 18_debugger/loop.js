@@ -6,5 +6,4 @@ for (let i = 1; i <= 50; i++) {
     sum += i
 }
 sum = sum / 75
-
 console.log(sum)

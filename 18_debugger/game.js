@@ -34,3 +34,4 @@ if (playerLives > 0 && dealerLives == 0) {
 if (playerLives == 0 && dealerLives > 0) {
     console.log("😢 Game Over! You died! Dealer wins! 💀")
 }
+
