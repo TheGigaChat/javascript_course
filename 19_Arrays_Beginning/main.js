@@ -1,20 +1,21 @@
 // arrays
-const arr = []
+const ingredient = "🌶️"
+const ingredients = ["🍄", "🥓", "🥒", "🥔"]
 
 // add and remove
-arr.push(23, 22, 21, 29)
-arr.pop()
-arr.unshift("I am the first")
-arr.shift()
+ingredients.push("🥕")
+ingredients.pop()
+ingredients.unshift("🥩")
+ingredients.shift()
 
 // return the value
-arr.push(29)
-const lastElement = arr.pop()
-arr.unshift("I am the first")
-const firstElement = arr.shift()
+const ingredientsLength = ingredients.push("🧀")
+const lastElement = ingredients.pop()
+ingredients.unshift("🍞")
+const firstElement = ingredients.shift()
 console.log(lastElement)
 console.log(firstElement)
-console.log(arr)
+console.log(ingredients)
 console.clear()
 
 // access by indexes
