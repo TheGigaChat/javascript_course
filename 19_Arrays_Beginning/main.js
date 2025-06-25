@@ -26,6 +26,8 @@ console.log(shelf[2])
 console.log(shelf[3])
 const shelfLength = shelf.length
 console.log(shelfLength)
+const lastElementIndex = shelfLength - 1
+console.log(lastElementIndex)
 console.clear()
 
 
@@ -44,4 +46,3 @@ for (let i = 0; i < items.length; i++) {
     console.log(item)
 }
 console.clear()
-
