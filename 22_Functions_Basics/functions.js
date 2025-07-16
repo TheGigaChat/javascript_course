@@ -1,48 +1,40 @@
-// Function - Is a reusable block of code.
+// Function - a block of reusable code.
+function email() {
+    console.log("Hi!")
+    console.log("Something important...")
+    console.log("All the best, Bob")
+}
 
-// function email() {
-//     console.log("Hi!")
-//     console.log("Something important...")
-//     console.log("All the best, Bob")
-// }
+// send to friend1
+email()
 
-// // send to friend1
-// email()
-
-// // send to friend2
-// email()
+// send to friend2
+email()
 
 
-// function emailParam(message) {
-//     console.log("Hi!")
-//     console.log(message)
-//     console.log("All the best, Bob")
-// }
+// Arguments and Parameters
+function emailParam(mainPart) {  // mainPart is a variable and it is called a Parameter
+    console.log("Hi!")
+    console.log(mainPart)
+    console.log("All the best, Bob")
+}
 
-// // send to friend1
-// emailParam("My message")
+// send to friend1
+emailParam("How are you?")  // "How are you?" is a message that we send to the function and it is called an Argument
 
-// // let message = "My message"  // explanations of arguments and parameters
-// // console.log(message)
-
-// // send to friend2
-// emailParam("How are you!")
+emailParam("Something important..")  // we can send different messages to the funciton
 
 
 
+// Return keyword
+function emailReturn(message) {
+    console.log("Hi!")
+    console.log(message)
+    console.log("All the best, Bob")
 
-// function emailReturn(message) {
-//     console.log("Hi!")
-//     console.log(message)
-//     console.log("All the best, Bob")
-    
-//     // send back a responce that the message is arrived successfully
-//     return "Arrived"
-// }
+    // send back a responce that the message has been sent successfully
+    return "Arrived"
+}
 
-// const emailResponce = emailReturn("message")  // "Arrived"
-// console.log(emailResponce)
-
-// console.log(emailReturn("message"))
-
-// confirm(emailReturn("message"))  // advanced
+const emailResponce = emailReturn("message")  // emailResponce is equal to "Arrived"
+console.log(emailResponce)
