@@ -25,6 +25,9 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 18 lesson: Debug tools
  - 19 lesson: Array Beginning
  - 20 lesson: Array Practice
+ - 21 lesson: Scoping
+ - 22 lesson: Functions Basics
+ - 23 lesson: Functions Practice
 
 ## Authors
 
