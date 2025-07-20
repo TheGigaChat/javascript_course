@@ -23,6 +23,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 16 lesson: For Loops
  - 17 lesson: Practice: For Loops
  - 18 lesson: Debug tools
+ - 19 lesson: Array Beginning
+ - 20 lesson: Array Practice
 
 ## Authors
 
