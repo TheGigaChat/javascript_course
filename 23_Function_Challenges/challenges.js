@@ -1,5 +1,3 @@
-// challenges
-
 // Challenge number: 1
 // This function has one parameter `message`.
 // The function should display the message in the console with the question mark in the end.
@@ -28,12 +26,13 @@ function displayQuestion(message) {
 //
 // Examples:
 //  - calculateEarnings(1, 1) => 1
-//  - calculateEarnings(0, 1) => 0
 //  - calculateEarnings(10, 10) => 100
 //  - calculateEarnings(40, 100) => 4000
+//  - calculateEarnings(0, 1000) => 0
 
 function calculateEarnings(hours, payPerHour) {
-    return hours * payPerHour
+    const totalEarnings = hours * payPerHour
+    return totalEarnings
 }
 
 
@@ -66,13 +65,13 @@ function addPlanToBothEnds(plan) {
 // Challenge number: 4
 // This function has two parameters `numbers[]`, `number`.
 // The function should return true if a given array `numbers[]` contains a number that is greater than a given `number`.
-// Oterwise it should return false.
+// Otherwise it should return false.
 //
 // Examples
 //  - containsNumberGreaterThan([2], 1) => true
 //  - containsNumberGreaterThan([1], 2) => false
-//  - containsNumberGreaterThan([1, 0, 2], 2) => false
 //  - containsNumberGreaterThan([1, 0, 2], 1) => true
+//  - containsNumberGreaterThan([1, 0, 2], 2) => false
 //  - containsNumberGreaterThan([], 0) => false
 
 function containsNumberGreaterThan(numbers, number) {
@@ -87,5 +86,3 @@ function containsNumberGreaterThan(numbers, number) {
 
     return response
 }
-
-// Show the keyword return (optional)
