@@ -1,8 +1,9 @@
 // Main Game Loop
-let winner = false
+let winner
 const mapArray = [["#", "#", "#", "#", "#"], ["#", "#", "#", "#", "#"], ["#", "#", "#", "#", "#"], ["#", "#", "#", "#", "#"], ["#", "#", "#", "#", "#"]]
 
 function drawMap() {
+    console.clear()
     let map = ""
     for (let i = 0; i < 5; i++) {
         let row = ""
@@ -17,24 +18,29 @@ function drawMap() {
 
 function addEnemy() {
     // enemy index
-    let enemyIndex = Math.floor(Math.random() * 5) // set to a random in the future
+    const enemyIndex = Math.floor(Math.random() * 5) // set to a random
 
     // get the first line
     const firstRow = mapArray[0]
 
+    // add the collision in the future
+
     // set the enemy
-    firstRow[enemyIndex] = "v"  // v = enemy  // say about the conversion
+    firstRow[enemyIndex] = "E"  // E = enemy  // say about the conversion
 }
 
 function addUnit() {
     // unit index
-    let unitIndex = prompt("Give an index from 0-4")
+    const unitIndex = prompt("Give an index from 0-4")
+    // const unitIndex = Math.floor(Math.random() * 5)
 
     // get the last line
     const lastRow = mapArray[4]
 
+    // add the collision in the future
+
     // set the unit
-    lastRow[unitIndex] = "V"  // V - friendly unit
+    lastRow[unitIndex] = "U"  // U - friendly unit
 }
 
 function moveEnemy() {
@@ -43,7 +49,7 @@ function moveEnemy() {
         const row = mapArray[i]
         for (let j = 0; j < 5; j++) {
             const tile = row[j]
-            if (tile === "v") {
+            if (tile === "E") {
                 // check the collision
                 const canMove = collisionEnemy(i, j)
                 if (canMove === undefined) {
@@ -51,7 +57,7 @@ function moveEnemy() {
                 } else if (canMove) {
                     row[j] = "#"
                     const nextRow = mapArray[i + 1]
-                    nextRow[j] = "v"
+                    nextRow[j] = "E"
                 } else {
                     row[j] = "#"
                     const nextRow = mapArray[i + 1]
@@ -65,20 +71,21 @@ function moveEnemy() {
 function collisionEnemy(i, j) {
     const nextRow = mapArray[i + 1]  // undefined
     if (nextRow === undefined) {
-        // we have a winner
-        winner = true
-        console.log("You defeat..")
-        return undefined // no matter the return
+        if (winner === undefined) {
+            // we have a winner
+            winner = "E"
+        }
+        return undefined // abrupt the function
     }
 
     const nextTile = nextRow[j]
     if (nextTile === "#") {
         // don't have collision
         return true
-    } else if (nextTile === "V") {
+    } else if (nextTile === "U") {
         return false
     }
-    //  else if (nextTile === "v") {  // impossible case
+    //  else if (nextTile === "E") {  // impossible case
     //     return true
     // }
 }
@@ -90,14 +97,14 @@ function moveUnit() {
         const row = mapArray[i]
         for (let j = 0; j < 5; j++) {
             const tile = row[j]
-            if (tile === "V") {
+            if (tile === "U") {
                 const canMove = collisionUnit(i, j)
                 if (canMove === undefined) {
                     return
                 } else if (canMove) {
                     row[j] = "#"
                     const nextRow = mapArray[i - 1]
-                    nextRow[j] = "V"
+                    nextRow[j] = "U"
                 } else {
                     row[j] = "#"
                     const nextRow = mapArray[i - 1]
@@ -111,9 +118,10 @@ function moveUnit() {
 function collisionUnit(i, j) {
     const nextRow = mapArray[i - 1]  // undefined
     if (nextRow === undefined) {
-        // we have a winner
-        winner = true
-        console.log("You win!")
+        if (winner === undefined) {
+            // we have a winner
+            winner = "U"
+        }
         return
     }
 
@@ -121,8 +129,18 @@ function collisionUnit(i, j) {
     if (nextTile === "#") {
         // don't have a collision
         return true
-    } else if (nextTile === "v") {
+    } else if (nextTile === "E") {
         return false
+    }
+}
+
+function winnerCheck() {
+    if (winner === "U") {
+        console.log("You win!")
+        return true
+    } else if (winner === "E") {
+        console.log("You defeat..")
+        return true
     }
 }
 
@@ -132,9 +150,11 @@ while (!winner) {
     // Game
     moveEnemy()
     moveUnit()
-    if (winner) break
+    if (winnerCheck()) {
+        break
+    }
     addEnemy()
     addUnit()
-    console.clear()
     drawMap()
+    winnerCheck()
 }
