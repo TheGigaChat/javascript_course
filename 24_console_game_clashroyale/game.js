@@ -99,7 +99,7 @@ function moveUnit() {
                     const nextRow = mapArray[i - 1]
                     nextRow[j] = "V"
                 } else {
-                    rowArray[j] = "#"
+                    row[j] = "#"
                     const nextRow = mapArray[i - 1]
                     nextRow[j] = "#"
                 }
@@ -128,21 +128,13 @@ function collisionUnit(i, j) {
 
 
 drawMap()
-console.log("-----")
 while (!winner) {
     // Game
+    moveEnemy()
+    moveUnit()
+    if (winner) break
     addEnemy()
     addUnit()
-    drawMap()
     console.clear()
-    moveEnemy()
-    if (winner) {
-        break
-    }
-    moveUnit()
-    if (winner) {
-        break
-    }
     drawMap()
-    console.log("-----")
 }
