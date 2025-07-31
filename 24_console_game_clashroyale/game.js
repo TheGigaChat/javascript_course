@@ -29,21 +29,21 @@ function addEnemy() {
     firstRow[enemyIndex] = "E"  // E = enemy  // say about the conversion
 }
 
-function addUnit() {
-    // unit index
-    const unitIndex = prompt("Give an index from 0-4")
-    // const unitIndex = Math.floor(Math.random() * 5)
+function addAlly() {
+    // ally index
+    const allyIndex = prompt("Give an index from 0-4")
+    // const allyIndex = Math.floor(Math.random() * 5)
 
     // get the last line
     const lastRow = mapArray[4]
 
     // add the collision in the future
 
-    // set the unit
-    lastRow[unitIndex] = "U"  // U - friendly unit
+    // set the ally
+    lastRow[allyIndex] = "A"  // A - ally
 }
 
-function moveEnemy() {
+function moveEnemies() {
     // check all enemies
     for (let i = 4; i >= 0; i--) {
         const row = mapArray[i]
@@ -53,6 +53,7 @@ function moveEnemy() {
                 // check the collision
                 const canMove = collisionEnemy(i, j)
                 if (canMove === undefined) {
+                    winner = "E"
                     return
                 } else if (canMove) {
                     row[j] = "#"
@@ -71,10 +72,6 @@ function moveEnemy() {
 function collisionEnemy(i, j) {
     const nextRow = mapArray[i + 1]  // undefined
     if (nextRow === undefined) {
-        if (winner === undefined) {
-            // we have a winner
-            winner = "E"
-        }
         return undefined // abrupt the function
     }
 
@@ -82,7 +79,7 @@ function collisionEnemy(i, j) {
     if (nextTile === "#") {
         // don't have collision
         return true
-    } else if (nextTile === "U") {
+    } else if (nextTile === "A") {
         return false
     }
     //  else if (nextTile === "E") {  // impossible case
@@ -91,20 +88,21 @@ function collisionEnemy(i, j) {
 }
 
 
-function moveUnit() {
-    // check all units
+function moveAllies() {
+    // check all Allies
     for (let i = 0; i < 5; i++) {
         const row = mapArray[i]
         for (let j = 0; j < 5; j++) {
             const tile = row[j]
-            if (tile === "U") {
-                const canMove = collisionUnit(i, j)
+            if (tile === "A") {
+                const canMove = collisionAlly(i, j)
                 if (canMove === undefined) {
+                    winner = "A"
                     return
                 } else if (canMove) {
                     row[j] = "#"
                     const nextRow = mapArray[i - 1]
-                    nextRow[j] = "U"
+                    nextRow[j] = "A"
                 } else {
                     row[j] = "#"
                     const nextRow = mapArray[i - 1]
@@ -115,14 +113,10 @@ function moveUnit() {
     }
 }
 
-function collisionUnit(i, j) {
+function collisionAlly(i, j) {
     const nextRow = mapArray[i - 1]  // undefined
     if (nextRow === undefined) {
-        if (winner === undefined) {
-            // we have a winner
-            winner = "U"
-        }
-        return
+        return undefined
     }
 
     const nextTile = nextRow[j]
@@ -135,26 +129,28 @@ function collisionUnit(i, j) {
 }
 
 function winnerCheck() {
-    if (winner === "U") {
+    if (winner === "A") {
         console.log("You win!")
         return true
     } else if (winner === "E") {
-        console.log("You defeat..")
+        console.log("You lose..")
         return true
     }
 }
 
 
 drawMap()
-while (!winner) {
+while (winner === undefined) {
     // Game
-    moveEnemy()
-    moveUnit()
+    moveEnemies()
+    if (winnerCheck()) {
+        break
+    }
+    moveAllies()
     if (winnerCheck()) {
         break
     }
     addEnemy()
-    addUnit()
+    addAlly()
     drawMap()
-    winnerCheck()
 }
