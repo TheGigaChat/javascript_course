@@ -28,6 +28,7 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 21 lesson: Scoping
  - 22 lesson: Functions Basics
  - 23 lesson: Functions Practice
+ - 24 lesson: 2D Arrays: Console Clash Royale Game Project
 
 ## Authors
 
