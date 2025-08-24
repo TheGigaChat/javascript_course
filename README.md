@@ -29,6 +29,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 22 lesson: Functions Basics
  - 23 lesson: Functions Practice
  - 24 lesson: 2D Arrays: Console Clash Royale Game Project
+ - 25 lesson: Units Movement Logic: Console Clash Royale Game Project
+ - 26 lesson: Collision and Game Loop: Console Clash Royale Game Project
 
 ## Authors
 
