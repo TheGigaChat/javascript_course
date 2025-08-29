@@ -5,12 +5,12 @@
 
 ## Steps from the Video
 
-– Math Constants
-– Powers & Logarithms (Math.pow, Math.log)
-– Math.min() & Math.max()
-– NaN (Not-a-Number)
-– Rounding methods (ceil, floor, round, trunc)
-– Useful Math methods (random, abs, sign)
+ - Math Constants
+ - Powers & Logarithms (Math.pow, Math.log)
+ - Math.min() & Math.max()
+ - NaN (Not-a-Number)
+ - Rounding methods (ceil, floor, round, trunc)
+ - Useful Math methods (random, abs, sign)
 
 
 
