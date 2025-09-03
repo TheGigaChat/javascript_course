@@ -1,0 +1,5 @@
+# Visual Studio Code
+.vscode/
+
+# Other folders to ignore
+00_other/
