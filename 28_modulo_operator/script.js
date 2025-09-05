@@ -8,7 +8,7 @@ console.log(5 % 3)  // 5 - 3 (the highest divisible number) = 2 remainder
 const number = 5
 if (number % 2 == 0) {
     console.log("This number is even.")
-} else if (number % 1 == 0) {
+} else if (number % 2 == 1) {
     console.log("This number is odd.")
 }
 
