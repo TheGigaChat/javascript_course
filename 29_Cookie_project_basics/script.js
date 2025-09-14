@@ -1,11 +1,11 @@
 let count = 0
 
 const countElement = document.getElementById("count")
-const buttonElement = document.getElementById("cookie")
+const cookieElement = document.getElementById("cookie")
 
-function increaseCounter() {
+function increaseCount() {
     count++
-    countElement.textContent = "Count: " + count;
+    countElement.textContent = "Count: " + count
 }
 
-buttonElement.addEventListener("click", increaseCounter)
+cookieElement.addEventListener('click', increaseCount)
