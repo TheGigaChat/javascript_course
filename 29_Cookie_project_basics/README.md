@@ -1,6 +1,6 @@
 ## Video link
 
-[Simple Cookie Clicker project: JavaScript + HTML]([https://youtu.be/21MFAZvF_Vk](https://youtu.be/Ge_rA2dlo_g))
+[Simple Cookie Clicker project: JavaScript + HTML](https://youtu.be/hNvgABm8j18)
 
 
 ## Steps from the Video
