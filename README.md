@@ -34,6 +34,7 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 27 lesson: Math Methods
  - 28 lesson: Modulo Operator
  - 29 lesson: HTML Basics: Cookie Clicker Project
+ - 30 lesson: CSS Basics: Cookie Clicker Project
 
 ## Authors
 
