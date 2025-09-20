@@ -1,6 +1,6 @@
 ## Video link
 
-[JavaScript Modulo % Operator — Beginner’s Guide]([https://youtu.be/21MFAZvF_Vk](https://youtu.be/Ge_rA2dlo_g))
+[JavaScript Modulo % Operator — Beginner’s Guide](https://youtu.be/Ge_rA2dlo_g)
 
 
 ## Steps from the Video
