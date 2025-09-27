@@ -1,14 +1,12 @@
 ## Video link
 
-[Learn CSS Basics | Cookie Clicker Series](https://youtu.be/-z3K0Cdv1Mg)
+[CSS Flexbox & Cookie Animation | Cookie Clicker Series](https://youtu.be/bbFr3C5fiT4)
 
 
 ## Steps from the Video
 
- - Create CSS File & Connect to HTML
- - Basic CSS Structure
- - Font Properties
- - Margin property
+ - Centering with Flexbox
+ - Click Animation for the Cookie
 
 
 
