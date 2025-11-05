@@ -25,16 +25,16 @@ const inventory = {
   },
 }
 
-console.log("== PART 1: Build inventory ==");
+// console.log("== PART 1: Build inventory ==");
 inventory.addElements(stuff)
-console.log("Inventory after addElements:", inventory);
+// console.log("Inventory after addElements:", inventory);
 // Inventory after addElements: {water: 2, fire: 3, air: 2, earth: 2, ...}
 
 inventory.addElement("water");
 inventory.addElement("water");
 inventory.addElement("fire");
 inventory.addElement("papaya"); // invalid => does nothing
-console.log("Inventory after addElement:", inventory);
+// console.log("Inventory after addElement:", inventory);
 // Inventory after operations: {water: 4, fire: 4, air: 2, earth: 2}
 
 inventory.takeElement("fire");
@@ -42,7 +42,7 @@ inventory.takeElement("banana"); // invalid => does nothing
 inventory.takeElement("air");
 inventory.takeElement("air");
 inventory.takeElement("air"); // hits zero => "You don't have this resource."
-console.log("Inventory after takeElement:", inventory);
+// console.log("Inventory after takeElement:", inventory);
 // Inventory after operations: {water: 4, fire: 3, air: 0, earth: 2}
 
 
@@ -60,10 +60,10 @@ const alchemyLab = {
 }
 
 console.log("\n== PART 2: Craft potions ==");
-const p1 = alchemyLab.craftPotion("speed", inventory);
+const p1 = alchemyLab.craftPotion("speedPotion", inventory);
 // You don't have enough recourses.
-const p2 = alchemyLab.craftPotion("power", inventory);
-const p3 = alchemyLab.craftPotion("health", inventory);
+const p2 = alchemyLab.craftPotion("powerPotion", inventory);
+const p3 = alchemyLab.craftPotion("healthPotion", inventory);
 
 console.log("Craft results:", p1, p2, p3);
 // Craft results: {} {damage: 5} {hp: 30}
