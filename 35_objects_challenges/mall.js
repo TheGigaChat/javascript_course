@@ -2,14 +2,7 @@
 const stuff = [
   "water", "fire", "stone", "air", "earth", "fire",
   "banana", "water", "dust", "air", "earth", "fire"
-];
-
-const hero = {
-  name: "Hero",
-  hp: 100,
-  damage: 10,
-  speed: 500
-};
+]
 
 // -------------------- PART 1: Inventory --------------------
 const inventory = {
@@ -31,3 +24,36 @@ const inventory = {
     // If the element count is 0, display the message "You don't have this resource."
   },
 }
+
+console.log("== PART 1: Build inventory ==");
+inventory.addElements(stuff)
+console.log({ water: inventory.water, fire: inventory.fire, air: inventory.air, earth: inventory.earth });
+// {water: 2, fire: 3, air: 2, earth: 2}
+
+
+// -------------------- PART 2: Alchemy Lab --------------------
+const alchemyLab = {
+  // 1 water, 2 air => speedPotion{speed: 50}
+  // 2 fire, 1 earth => powerPotion{damage: 5}
+  // 2 water, 1 earth => healthPotion{hp: 30}
+
+  craftPotion(potionName, inventory) {
+    // TODO: craft a potion using the recipes (ignoring invalid names)
+    // if in the inventory is not enough recourses, display a message.
+    // when you craft a potion, you should take the recourses from the inventory.
+  },
+}
+
+console.log("\n== PART 2: Craft potions ==");
+const p1 = alchemyLab.craftPotion("speed", inventory);
+// You don't have enough recourses.
+const p2 = alchemyLab.craftPotion("power", inventory);
+const p3 = alchemyLab.craftPotion("health", inventory);
+
+console.log("Craft results:", p1, p2, p3);
+// Craft results: {} {damage: 5} {hp: 30}
+
+console.log("Inventory after crafting:", {
+  water: inventory.water, fire: inventory.fire, air: inventory.air, earth: inventory.earth
+});
+// Inventory after crafting: {water: 1, fire: 0, air: 0, earth: 0}
