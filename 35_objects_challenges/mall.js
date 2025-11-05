@@ -12,7 +12,7 @@ const inventory = {
   earth: 0,
 
   addElements(list) {
-    // TODO: build counts from a raw list (ignoring invalid elements)
+    // TODO: increase counts for valid elements (ignoring invalid elements)
   },
 
   addElement(element) {
@@ -27,8 +27,23 @@ const inventory = {
 
 console.log("== PART 1: Build inventory ==");
 inventory.addElements(stuff)
-console.log({ water: inventory.water, fire: inventory.fire, air: inventory.air, earth: inventory.earth });
-// {water: 2, fire: 3, air: 2, earth: 2}
+console.log("Inventory after addElements:", inventory);
+// Inventory after addElements: {water: 2, fire: 3, air: 2, earth: 2, ...}
+
+inventory.addElement("water");
+inventory.addElement("water");
+inventory.addElement("fire");
+inventory.addElement("papaya"); // invalid => does nothing
+console.log("Inventory after addElement:", inventory);
+// Inventory after operations: {water: 4, fire: 4, air: 2, earth: 2}
+
+inventory.takeElement("fire");
+inventory.takeElement("banana"); // invalid => does nothing
+inventory.takeElement("air");
+inventory.takeElement("air");
+inventory.takeElement("air"); // hits zero => "You don't have this resource."
+console.log("Inventory after takeElement:", inventory);
+// Inventory after operations: {water: 4, fire: 3, air: 0, earth: 2}
 
 
 // -------------------- PART 2: Alchemy Lab --------------------
