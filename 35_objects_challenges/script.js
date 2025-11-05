@@ -1,3 +1,27 @@
+// object (key: value)
+
+const fruit1 = {
+  "banana": 1,
+}
+
+const fruit2 = {
+  banana: "myBanana",
+}
+
+console.log(fruit1)
+console.log(fruit2)
+
+
+// 1 way
+console.log(fruit1.banana)
+
+// 2 way
+const key = "banana"
+console.log(fruit1[key])
+
+
+// mall.js implementation
+
 // -------------------- Data --------------------
 const stuff = [
   "water", "fire", "stone", "air", "earth", "fire",
@@ -13,15 +37,42 @@ const inventory = {
 
   addElements(list) {
     // TODO: increase counts for valid elements (ignoring invalid elements)
+    for (let i = 0; i < list.length; i++) {
+      const element = list[i]
+
+      if (element === "water") {
+        this.water++
+      }
+      if (element === "fire") {
+        this.fire++
+      }
+      if (element === "air") {
+        this.air++
+      }
+      if (element === "earth") {
+        this.earth++
+      }
+
+    }
   },
 
   addElement(element) {
     // TODO: increase the count of the corresponding element (ignoring invalid elements)
+    if (this[element] !== undefined) {
+      this[element]++
+    }
   },
 
   takeElement(element) {
     // TODO: decrease the count of the corresponding element (ignoring invalid elements)
     // If the element count is 0, display the message "You don't have this resource."
+    if (this[element] !== undefined) {
+      if (this[element] === 0) {
+        console.log("You don't have this resource")
+      } else {
+        this[element]--
+      }
+    }
   },
 }
 
