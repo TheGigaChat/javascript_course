@@ -25,16 +25,16 @@ const inventory = {
   },
 }
 
-// console.log("== PART 1: Build inventory ==");
+console.log("== PART 1: Build inventory ==");
 inventory.addElements(stuff)
-// console.log("Inventory after addElements:", inventory);
+console.log("Inventory after addElements:", inventory);
 // Inventory after addElements: {water: 2, fire: 3, air: 2, earth: 2, ...}
 
 inventory.addElement("water");
 inventory.addElement("water");
 inventory.addElement("fire");
 inventory.addElement("papaya"); // invalid => does nothing
-// console.log("Inventory after addElement:", inventory);
+console.log("Inventory after addElement:", inventory);
 // Inventory after operations: {water: 4, fire: 4, air: 2, earth: 2}
 
 inventory.takeElement("fire");
@@ -42,7 +42,7 @@ inventory.takeElement("banana"); // invalid => does nothing
 inventory.takeElement("air");
 inventory.takeElement("air");
 inventory.takeElement("air"); // hits zero => "You don't have this resource."
-// console.log("Inventory after takeElement:", inventory);
+console.log("Inventory after takeElement:", inventory);
 // Inventory after operations: {water: 4, fire: 3, air: 0, earth: 2}
 
 
@@ -54,8 +54,8 @@ const alchemyLab = {
 
   craftPotion(potionName, inventory) {
     // TODO: craft a potion using the recipes (ignoring invalid names)
-    // if in the inventory is not enough recourses, display a message.
-    // when you craft a potion, you should take the recourses from the inventory.
+    // if in the inventory is not enough recources, display a message.
+    // when you craft a potion, you should take the recources from the inventory.
   },
 }
 
