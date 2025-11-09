@@ -35,6 +35,9 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 28 lesson: Modulo Operator
  - 29 lesson: HTML Basics: Cookie Clicker Project
  - 30 lesson: CSS Basics: Cookie Clicker Project
+ - 31 lesson: CSS Flex: Cookie Clicker Project
+ - 32 lesson: Game Elements: Cookie Clicker Project
+ - 33 lesson: AutoClick: Cookie Clicker Project
 
 ## Authors
 
