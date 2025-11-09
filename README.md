@@ -38,6 +38,9 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 31 lesson: CSS Flex: Cookie Clicker Project
  - 32 lesson: Game Elements: Cookie Clicker Project
  - 33 lesson: AutoClick: Cookie Clicker Project
+ - 34 lesson: Objects
+ - 35 lesson: Practice: Objects Part 1
+ - 36 lesson: Practice: Objects Part 2
 
 ## Authors
 
