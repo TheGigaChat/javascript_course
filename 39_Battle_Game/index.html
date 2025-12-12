@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mini Battle Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="game">
+    <h1>Mini Battle Game</h1>
+
+    <div class="unit">
+        <h2 id="player-name">Player</h2>
+        <p>HP: <span id="player-hp">100</span></p>
+        <div class="hpbar">
+          <div class="hpfill" id="player-bar"></div>
+        </div>
+    </div>
+
+    <div class="unit">
+        <h2 id="enemy-name">Enemy</h2>
+        <p>HP: <span id="enemy-hp">100</span></p>
+        <div class="hpbar">
+          <div class="hpfill" id="enemy-bar"></div>
+        </div>
+    </div>
+
+    <button id="attack-btn">Attack</button>
+
+    <p id="log"></p>
+</div>
+
+</body>
+</html>
