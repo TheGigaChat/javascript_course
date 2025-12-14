@@ -5,12 +5,12 @@
 
 ## Steps from the Video
 
- - TODO 1: Creating Player and Enemy (Unit Class)
- - TODO 2: Connecting HTML Elements
- - TODO 3: Battle Logic
- - TODO 4: Updating the UI
- - TODO 5: Win Conditions
- - TODO 6: Game Loop
+ - Creating Player and Enemy (Unit Class)
+ - Connecting HTML Elements
+ - Battle Logic
+ - Updating the UI
+ - Win Conditions
+ - Game Loop
  - Adding Fancy Styles
 
 
