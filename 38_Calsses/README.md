@@ -5,8 +5,10 @@
 
 ## Steps from the Video
 
- - How Primitive Data Types Work
- - How Reference Data Types Work
+ - Why We Need Classes
+ - Class vs Object Syntax
+ - Constructor
+ - Methods, Getters, and Setters
 
 
 
