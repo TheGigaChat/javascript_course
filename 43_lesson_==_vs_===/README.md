@@ -1,6 +1,6 @@
 ## Video link
 
-[Why We Don’t Use == in JavaScript Anymore?](https://youtu.be/7oBfjcX9I9E)
+[Why We Don’t Use == in JavaScript Anymore?](https://youtu.be/QcCtg3KweAU)
 
 
 ## Steps from the Video
