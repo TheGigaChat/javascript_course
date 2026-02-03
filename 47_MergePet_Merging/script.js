@@ -17,6 +17,8 @@ const PETS = [
 const board = new Array(16).fill(null);  // [null, null, null...]
 let poop = 1000
 let bestLevel = 1
+let mergeCellIndex1 = null  // null or index
+let mergeCellIndex2 = null
 
 // HTML elements
 const boardEl = document.getElementById("grid")
@@ -35,6 +37,12 @@ function generatePetIndex() {
 function increasePoop(reward) {
     poop += reward
     updateUI()
+}
+
+function resetIndexes() {
+    mergeCellIndex1 = null
+    mergeCellIndex2 = null
+    render()
 }
 
 // -----------------------------
@@ -71,6 +79,47 @@ function spawnNewPet() {
     updateUI()
 }
 
+function tryToMerge(cellIndex) {  // 0 - board.length
+    if (mergeCellIndex1 === null && mergeCellIndex2 === null) {
+        mergeCellIndex1 = cellIndex
+        return
+    }
+
+    if (mergeCellIndex1 !== null && mergeCellIndex2 === null) {
+        mergeCellIndex2 = cellIndex
+
+        const pet1 = board[mergeCellIndex1]
+        const pet2 = board[mergeCellIndex2]
+
+        // validation
+        if (pet1.level !== pet2.level) {
+            alert("The levels are different!")
+            resetIndexes()
+            return
+        }
+
+        if (mergeCellIndex1 === mergeCellIndex2) {
+            alert("Can't merge a pet to itself.")
+            resetIndexes()
+            return
+        }
+
+        if (PETS[pet1.level] === undefined) {
+            alert("You can't merge animals of the maximum level.")
+            resetIndexes()
+            return
+        }
+
+        // merging
+        // { emoji: "🐰", name: "Bunny", level: 2, reward: 2 }
+        const nextLevelPet = PETS[pet1.level]  // nextPetIndex = pet.level
+        board[mergeCellIndex1] = null
+        board[mergeCellIndex2] = nextLevelPet
+        bestLevel = Math.max(bestLevel, nextLevelPet.level)
+        resetIndexes()
+    }
+}
+
 // -----------------------------
 // Rendering
 // -----------------------------
@@ -93,9 +142,22 @@ function render() {
             petDiv.className = "pet"
             petDiv.textContent = emoji
 
+            // merging
+            const mergeBtn = document.createElement("button")
+            mergeBtn.textContent = "merge"
+
+            if (mergeCellIndex1 === i || mergeCellIndex2 === i) {
+                mergeBtn.className = "dragOver"
+            }
+
             // triggers
             petDiv.addEventListener("click",() => increasePoop(reward))
+            mergeBtn.addEventListener("click", () => {
+                mergeBtn.className = "dragOver"
+                tryToMerge(i)
+            })
 
+            petDiv.appendChild(mergeBtn)
             cellDiv.appendChild(petDiv)
         }
 
