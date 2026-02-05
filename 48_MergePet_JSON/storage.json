@@ -1,0 +1,10 @@
+{
+    "poop": 10,
+    "bestLevel": 1,
+    "board": [null, null],
+    "pet": {
+        "name": "Chick",
+        "level": 1,
+        "reward": 1
+    }
+}
