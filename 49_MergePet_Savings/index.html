@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pet Merge Clicker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Left panel -->
+    <section class="panel">
+      <div class="hd">
+        <div class="title">
+          <h1>Pet Merge Clicker</h1>
+          <small>Click pets → earn 💩 → buy more → drag & merge like 2048</small>
+        </div>
+        <div class="stats">
+          <div class="pill" title="Currency">
+            <span class="dot"></span>
+            <span>💩</span>
+            <b id="poop">0</b>
+          </div>
+          <div class="pill" title="Best pet level on board">
+            <span class="dot"></span>
+            <span>🏆</span>
+            <b id="bestLevel">0</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="bd">
+        <div class="controls">
+          <div class="shop">
+            <div class="shopcard">
+              <div class="left">
+                <div class="name">Buy a Level 1 Pet <span class="badge" id="buyCostBadge">Cost: 10💩</span></div>
+                <div class="desc">Spawns in an empty cell. If board is full — you can’t buy.</div>
+              </div>
+              <button class="primary" id="buyBtn">Buy</button>
+            </div>
+
+            <div class="shopcard">
+              <div class="left">
+                <div class="name">Auto Clicker <span class="badge" id="autoBadge">Off</span></div>
+                <div class="desc">Earns 💩 every second based on your best pet level.</div>
+              </div>
+              <button id="autoBtn">Enable (60💩)</button>
+            </div>
+          </div>
+
+          <div class="btnrow">
+            <button id="saveBtn">Save</button>
+            <button id="loadBtn">Load</button>
+            <button class="danger" id="resetBtn">Reset</button>
+          </div>
+
+            <div class="hint">
+                <div><b>How to play:</b></div>
+                <div>• Click a pet to earn 💩 (higher level pets give more).</div>
+                <div>• Buy new pets using 💩 to place them on the board.</div>
+                <div>• Click <b>Merge</b> on two pets of the same level to combine them.</div>
+                <div>• Merging creates a higher-level pet (up to the maximum level).</div>
+                <div>• Unlock higher levels to increase your 💩 income.</div>
+            </div>
+        </div>
+      </div>
+
+        <div class="footer">
+            <div>Tip: Merging requires two pets of the same level.</div>
+            <div>
+                <span class="kbd">Click</span> earn 💩 •
+                <span class="kbd">Merge</span> combine pets
+            </div>
+        </div>
+    </section>
+
+    <!-- Right panel -->
+    <section class="panel">
+      <div class="gridHd">
+        <div>
+          <h2>Board</h2>
+          <div class="sub">Combine to reach Level 10.</div>
+        </div>
+        <div class="pill" title="Goal">
+          <span class="dot"></span>
+          <span>🎯</span>
+          <b id="goalText">Reach Level 10</b>
+        </div>
+      </div>
+
+      <div class="gridWrap">
+        <div class="grid" id="grid" aria-label="Pet board">
+            <div class="cell">
+                <div class="pet">
+                    🐣
+                    <button class="dragOver">merge</button>
+                </div>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"><span class="miniDot"></span><span id="toastText">Hello</span></div>
+</body>
+</html>
