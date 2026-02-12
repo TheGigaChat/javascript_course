@@ -14,7 +14,9 @@ const PETS = [
     { emoji: "🐲", name: "Dragon", level: 9, reward: 40 },
     { emoji: "🦄", name: "Unicorn", level: 10, reward: 55 },
 ];
-const board = new Array(16).fill(null);  // [null, null, null...]
+const SAVING_KEY = "merge-pet-key"
+
+let board = new Array(16).fill(null);  // [null, null, null...]
 let poop = 1000
 let bestLevel = 1
 let mergeCellIndex1 = null  // null or index
@@ -25,6 +27,9 @@ const boardEl = document.getElementById("grid")
 const poopEl = document.getElementById("poop")
 const bestLvlEl = document.getElementById("bestLevel")
 const buyBtnEl = document.getElementById("buyBtn")
+const saveBtn = document.getElementById("saveBtn")
+const loadBtn = document.getElementById("loadBtn")
+const resetBtn = document.getElementById("resetBtn")
 
 // -----------------------------
 // Helpers
@@ -120,6 +125,45 @@ function tryToMerge(cellIndex) {  // 0 - board.length
     }
 }
 
+function save() {
+    const data = {
+        "board": board,
+        "poop": poop,
+        "bestLevel": bestLevel,
+        "mergeCellIndex1": mergeCellIndex1,
+        "mergeCellIndex2": mergeCellIndex2,
+    }
+    const dataJson = JSON.stringify(data)
+    localStorage.setItem(SAVING_KEY, dataJson)  // if you pass 'data' -> [Object object]
+    alert("Game is saved!")
+}
+
+function load() {
+    const dataJson = localStorage.getItem(SAVING_KEY)  // null or undefined
+    const data = JSON.parse(dataJson)  // null or undefined
+
+    if (data === null || data === undefined) {
+        alert("No savings yet!")
+        return
+    }
+
+    board = data.board
+    poop = data.poop
+    bestLevel = data.bestLevel
+    mergeCellIndex1 = data.mergeCellIndex1
+    mergeCellIndex2 = data.mergeCellIndex2
+
+    updateUI()
+    render()
+    alert("Game is load!")
+}
+
+function reset() {
+    location.reload()
+    localStorage.removeItem(SAVING_KEY)
+    alert("Game is reset!")
+}
+
 // -----------------------------
 // Rendering
 // -----------------------------
@@ -174,6 +218,9 @@ function updateUI() {
 // Triggers
 // -----------------------------
 buyBtnEl.addEventListener("click", spawnNewPet)
+saveBtn.addEventListener("click", save)
+loadBtn.addEventListener("click", load)
+resetBtn.addEventListener("click", reset)
 
 // -----------------------------
 // Game start
