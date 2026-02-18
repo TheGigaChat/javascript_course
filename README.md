@@ -41,6 +41,20 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 34 lesson: Objects
  - 35 lesson: Practice: Objects Part 1
  - 36 lesson: Practice: Objects Part 2
+ - 37 lesson: Reference vs Primitive data types
+ - 38 lesson: Classes basics
+ - 39 lesson: Classes practice: Battle clicker game
+ - 40 lesson: Ternary Operator
+ - 41 lesson: Template Literals
+ - 42 lesson: Switch Cases
+ - 43 lesson: == vs ===
+ - 44 lesson: 2D Board: Merge Pet Project
+ - 45 lesson: Animals Generation: Merge Pet Project
+ - 46 lesson: Animals Clickable Triggers: Merge Pet Project
+ - 47 lesson: Merging: Merge Pet Project
+ - 48 lesson: JSON: Merge Pet Project
+ - 49 lesson: Save, Load, Reset: Merge Pet Project
+ - 50 lesson: Auto-clicker: Merge Pet Project
 
 ## Authors
 
