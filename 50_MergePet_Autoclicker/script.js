@@ -21,6 +21,8 @@ let poop = 1000
 let bestLevel = 1
 let mergeCellIndex1 = null  // null or index
 let mergeCellIndex2 = null
+let autoClickerEnabled = false
+let autoIntervalId = null
 
 // HTML elements
 const boardEl = document.getElementById("grid")
@@ -30,6 +32,7 @@ const buyBtnEl = document.getElementById("buyBtn")
 const saveBtn = document.getElementById("saveBtn")
 const loadBtn = document.getElementById("loadBtn")
 const resetBtn = document.getElementById("resetBtn")
+const autoBtn = document.getElementById("autoBtn")
 
 // -----------------------------
 // Helpers
@@ -48,6 +51,27 @@ function resetIndexes() {
     mergeCellIndex1 = null
     mergeCellIndex2 = null
     render()
+}
+
+function getBestReward() {
+    const petIndex = bestLevel - 1
+    const pet = PETS[petIndex]  // { emoji: "🐱", name: "Cat", level: 3, reward: 4 }
+    const reward = pet.reward
+    return reward
+}
+
+function startAutoInterval() {
+    if (autoIntervalId !== null) {
+        return
+    }
+    autoBtn.textContent = "Enabled"
+    autoIntervalId = setInterval(() => increasePoop(getBestReward()), 1000)
+    autoClickerEnabled = true
+}
+
+function stopAutoInterval() {
+    clearInterval(autoIntervalId)
+    autoIntervalId = null
 }
 
 // -----------------------------
@@ -132,6 +156,7 @@ function save() {
         "bestLevel": bestLevel,
         "mergeCellIndex1": mergeCellIndex1,
         "mergeCellIndex2": mergeCellIndex2,
+        "autoClickerEnabled": autoClickerEnabled
     }
     const dataJson = JSON.stringify(data)
     localStorage.setItem(SAVING_KEY, dataJson)  // if you pass 'data' -> [Object object]
@@ -152,6 +177,12 @@ function load() {
     bestLevel = data.bestLevel
     mergeCellIndex1 = data.mergeCellIndex1
     mergeCellIndex2 = data.mergeCellIndex2
+    autoClickerEnabled = data.autoClickerEnabled
+
+    stopAutoInterval()
+    if (autoClickerEnabled) {
+        startAutoInterval()
+    }
 
     updateUI()
     render()
@@ -221,6 +252,20 @@ buyBtnEl.addEventListener("click", spawnNewPet)
 saveBtn.addEventListener("click", save)
 loadBtn.addEventListener("click", load)
 resetBtn.addEventListener("click", reset)
+autoBtn.addEventListener("click", () => {
+    if (autoClickerEnabled) {
+        return
+    }
+
+    // autoClickerEnabled = false
+    if (poop < 60) {
+        alert("You don't have enough poop!")
+        return
+    }
+
+    poop -= 60
+    startAutoInterval()
+})
 
 // -----------------------------
 // Game start
