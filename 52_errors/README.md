@@ -1,6 +1,6 @@
 ## Video link
 
-[Build a Complete JavaScript Game – Full Beginner Course](https://youtu.be/A9Z1sYVDAAk)
+[Try / Catch in JavaScript – Error Handling Guide](https://youtu.be/ldbiLVplgTg)
 
 
 ## Steps from the Video
