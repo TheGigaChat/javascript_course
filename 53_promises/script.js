@@ -23,8 +23,7 @@ console.log("action 1")  // 1ms
 console.log("action 2")  // 1ms
 console.log("action 3")  // 1ms
 
-// sync vs async
-
+// sync then async
 
 // setTimeout(() => {
 //     console.log(users)  // Promise: fulfilled
