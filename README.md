@@ -1,7 +1,8 @@
 
 # JavaScript Codeimas Full Course
 
-Welcome to the full course of JavaScript. Below you will find all codes that is used in JavaScript course on the [Codeimas](https://www.youtube.com/@Codeimas) channel.
+Welcome to the [Complete JavaScript Course for Beginners | 11 Hours](https://youtu.be/VgQUKDBDCE8). Below you will find all code that is used in this course.
+
 
 ## Topics
 
@@ -69,7 +70,7 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
 ## Authors
 
 Codeimas
-- [@JavaScript Guide](https://www.youtube.com/watch?v=bdr3fMwEDks)
+- [YouTube:Codeimas](https://www.youtube.com/@Codeimas)
 
 Code Creator
-- [@Codeimas](https://github.com/TheGigaChat)
+- [Github:Codeimas](https://github.com/TheGigaChat)
