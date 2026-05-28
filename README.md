@@ -23,11 +23,11 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 16 lesson: For Loops
  - 17 lesson: Practice: For Loops
  - 18 lesson: Debug tools
- - 19 lesson: Array Beginning
- - 20 lesson: Array Practice
+ - 19 lesson: Array
+ - 20 lesson: Practice: Array
  - 21 lesson: Scoping
- - 22 lesson: Functions Basics
- - 23 lesson: Functions Practice
+ - 22 lesson: Functions
+ - 23 lesson: Practice: Functions 
  - 24 lesson: 2D Arrays: Console Clash Royale Game Project
  - 25 lesson: Units Movement Logic: Console Clash Royale Game Project
  - 26 lesson: Collision and Game Loop: Console Clash Royale Game Project
@@ -42,8 +42,8 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 35 lesson: Practice: Objects Part 1
  - 36 lesson: Practice: Objects Part 2
  - 37 lesson: Reference vs Primitive data types
- - 38 lesson: Classes basics
- - 39 lesson: Classes practice: Battle clicker game
+ - 38 lesson: Classes
+ - 39 lesson: Practice Classes: Battle clicker game
  - 40 lesson: Ternary Operator
  - 41 lesson: Template Literals
  - 42 lesson: Switch Cases
@@ -55,6 +55,16 @@ Welcome to the full course of JavaScript. Below you will find all codes that is 
  - 48 lesson: JSON: Merge Pet Project
  - 49 lesson: Save, Load, Reset: Merge Pet Project
  - 50 lesson: Auto-clicker: Merge Pet Project
+ - 51 lesson: Merge Pet Project Full
+ - 52 lesson: Try/Catch
+ - 53 lesson: Promise, fetch, async/await
+ - 54 lesson: Practice: Promise, fetch, async/await
+ - 55 lesson: map, filter, reduce
+ - 56 lesson: Practice: map, filter, reduce
+ - 57 lesson: sort vs toSorted
+ - 58 lesson: Modules
+ - 59 lesson: set
+ - 60 lesson: Practice: set
 
 ## Authors
 
